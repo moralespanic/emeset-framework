@@ -138,6 +138,8 @@ class Response implements ResponseInterface
      */
     public function setJSON(array $params = ["*"])
     {
+        $this->setHeader('Content-Type: application/json');
+
         $this->jsonParams = $params;
         $this->json = true;
     }
